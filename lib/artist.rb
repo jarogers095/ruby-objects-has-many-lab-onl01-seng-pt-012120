@@ -19,6 +19,6 @@ class Artist
   end
   
   def self.song_count()
-    return 0
+    return Song.all.select{|song| song.artist != nil}.size
   end
 end
