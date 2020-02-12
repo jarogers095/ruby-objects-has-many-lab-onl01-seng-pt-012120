@@ -14,6 +14,10 @@ class Author
     new_post.author = self
   end
   
+  def posts()
+    return Post.all.select{|a_post| a_post.author == self}
+  end
+  
   def self.post_count()
     return 0
   end
