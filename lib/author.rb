@@ -19,6 +19,6 @@ class Author
   end
   
   def self.post_count()
-    return 0
+    return Post.all.select{|a_post| a_post.author != nil}.size
   end
 end
